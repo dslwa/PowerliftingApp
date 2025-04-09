@@ -1,0 +1,66 @@
+.root {
+    -fx-background-color: #1c1c1c; /* głębokie czarne tło */
+}
+
+.vbox {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-padding: 20;
+}
+
+.button {
+    -fx-background-color: #b00020; /* ciemnoczerwony */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #d32f2f; /* jaśniejszy czerwony przy najechaniu */
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+}
+
+.text-field {
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaa;
+    -fx-border-color: #b00020;
+    -fx-border-radius: 5;
+}
+
+.table-view {
+    -fx-background-color: #2c2c2c;
+    -fx-border-color: #b00020;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+.column-header {
+    -fx-background-color: #b00020;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-cell {
+    -fx-padding: 8 10;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: #1c1c1c;
+}
+
+#centered-pane {
+    -fx-background-color: #1c1c1c;
+}
+
+#calculator-root {
+    -fx-padding: 20;
+    -fx-alignment: center;
+}
