@@ -15,7 +15,7 @@
   - Sort by **Total**, **Body Weight**, or **IPF GL Score**
   - Search by **name** or **federation**
   
-  ![Table](Screenshots/table.png)
+  ![Table](Screenshots/image1.png)
 
 - 📥 **CSV Export / Import**
   - Save results to a file or load from existing data
@@ -31,7 +31,7 @@
 - 📅 **Progress Visualization**
   - Double-click an athlete row to generate charts:
     - Total vs Weight
-    
+      ![Table](Screenshots/image.png)
 ---
 
 ## 🎨 Interface
