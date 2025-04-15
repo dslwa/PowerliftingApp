@@ -8,6 +8,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.DatePicker;
+
+import java.time.LocalDate;
 
 public class AthleteForm{
     public static void showForm(Competition competition){
@@ -18,6 +21,9 @@ public class AthleteForm{
         Scene formScene = new Scene(formRoot, 300, 500);
         formScene.getStylesheets().add(AthleteForm.class.getResource("/com/example/powerlifting_app/style.css").toExternalForm());
         formStage.setScene(formScene);
+
+        TextField idField = new TextField();
+        idField.setPromptText("Athlete ID");
 
         TextField nameField = new TextField();
         nameField.setPromptText("Name");
@@ -53,18 +59,21 @@ public class AthleteForm{
         deadliftField.setPromptText("Deadlift");
 
         Button saveButton = new Button("Save");
+        DatePicker datePicker = new DatePicker();
+        datePicker.setPromptText("Date of Lift");
 
         formRoot.getChildren().addAll(
-                nameField, surnameField, ageField, sexField, federationField,
+                idField, nameField, surnameField, ageField, sexField, federationField,
                 heightField, weightField, weightCategoryField,
                 squatField, benchField, deadliftField,
-                saveButton
+                datePicker,saveButton
         );
 
         formStage.show();
 
         saveButton.setOnAction(ev -> {
             try {
+                int id = Integer.parseInt(idField.getText());
                 String name = nameField.getText();
                 String surname = surnameField.getText();
                 int age = Integer.parseInt(ageField.getText());
@@ -77,8 +86,9 @@ public class AthleteForm{
                 double bench = Double.parseDouble(benchField.getText());
                 double deadlift = Double.parseDouble(deadliftField.getText());
 
-                Athlete newAthlete = new Athlete(name, surname, age, sex, federation, height, weight, weightCat);
-                Result newResult = new Result(newAthlete, squat, bench, deadlift);
+                Athlete newAthlete = new Athlete(id ,name, surname, age, sex, federation, height, weight, weightCat);
+                LocalDate date = datePicker.getValue();
+                Result newResult = new Result(newAthlete, squat, bench, deadlift, date);
 
                 competition.addResult(newResult);
                 System.out.println("Athlete Added: " + name + " " + surname);

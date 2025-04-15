@@ -1,7 +1,6 @@
 package com.example.powerlifting_app.Core;
 
 public class Athlete implements Printable {
-    private static  int next_Id = 1;
     private int id;
     private String name;
     private String surname;
@@ -13,8 +12,8 @@ public class Athlete implements Printable {
     private int weight_category;
 
     Athlete(){}
-    public Athlete(String name, String surname, int age, boolean sex, String fed, double height, double weight, int weight_category) {
-        this.id = next_Id;
+    public Athlete(int id, String name, String surname, int age, boolean sex, String fed, double height, double weight, int weight_category) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -23,7 +22,6 @@ public class Athlete implements Printable {
         this.height = height;
         this.weight = weight;
         this.weight_category = weight_category;
-        next_Id++;
     }
     public int getId(){
         return this.id;
