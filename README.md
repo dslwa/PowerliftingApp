@@ -22,17 +22,11 @@
 
 - 📈 **Training Calculators**
   - **BMI**: Body Mass Index
-    ![BMI](Screenshots/BMI.png)
-  - **FFMI**: Fat-Free Mass Index
-    ![FFMI](Screenshots/FFMI.png)
+  - **FFMI**: Fat-Free Mass Inde
   - **BMR**: Basal Metabolic Rate
-    ![BMR](Screenshots/image.png)
   - **IPF GL Score**: Based on event type and sex
-    ![IPF_GL](Screenshots/GL.png)
   - **1RM**: One-Rep Max (McGlothin formula)
-    ![One Rep Max](Screenshots/1RM.png)
   - **Meet Attempts**: Generate 3 attempts based on RPE
-    ![MeetAttempt](Screenshots/meet.png)
 
 - 📅 **Progress Visualization**
   - Double-click an athlete row to generate charts:
